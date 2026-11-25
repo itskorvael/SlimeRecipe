@@ -1,0 +1,21 @@
+# SlimeRecipe configuration. Run /slimerecipe reload after editing.
+
+recipe:
+  # Alginate Gel (shapeless): dried kelp + honey bottle + bone meal + lime dye -> slime balls.
+  # The honey bottle returns an empty glass bottle on its own (vanilla craft remainder).
+  enabled: true
+  dried-kelp: 2
+  # Slime balls produced per craft.
+  yield: 2
+  # When players see the recipe in their recipe book:
+  #   ingredient - the first time they hold a honey bottle or dried kelp
+  #   join       - as soon as they join
+  unlock: ingredient
+
+spawns:
+  # Slime mobs are cancelled for these spawn reasons (org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason).
+  # Spawn eggs and /summon (CUSTOM, SPAWNER_EGG, COMMAND...) are deliberately not listed, so admins can still make slimes.
+  blocked-reasons:
+    - NATURAL
+    - CHUNK_GEN
+    - SPAWNER

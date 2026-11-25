@@ -1,0 +1,14 @@
+name: SlimeRecipe
+version: '${version}'
+main: io.github.itskorvael.slimerecipe.SlimeRecipePlugin
+api-version: '${apiVersion}'
+description: Slimes no longer spawn; slime balls are crafted from kelp gel instead.
+commands:
+  slimerecipe:
+    description: Reload the SlimeRecipe config.
+    usage: /slimerecipe reload
+    permission: slimerecipe.admin
+permissions:
+  slimerecipe.admin:
+    description: Reload the SlimeRecipe config.
+    default: op
